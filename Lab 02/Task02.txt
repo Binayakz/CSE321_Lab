@@ -1,0 +1,12 @@
+#!/bin/bash
+
+ls *.txt > list
+
+while read line
+do
+	echo -e "\n\nBinayak Kumar Dey" >> $line
+done < list
+
+
+# Binayak Kumar Dey
+# 18301054

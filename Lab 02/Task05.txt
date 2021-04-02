@@ -1,0 +1,49 @@
+#! /bin/bash
+
+addition()
+{
+	return $(( $1 + $2 ))
+}
+
+subtraction()
+{
+	return $(( $1 - $2 ))
+}
+
+multiplication()
+{
+	return $(( $1 * $2 ))
+}
+
+division()
+{
+	return $(( $1 / $2 ))
+}
+
+echo "Which operation would you like to do?"
+read operation
+
+echo -n "Operand 1: "
+read operand1
+echo -n "Operand 2: "
+read operand2
+
+case "$operation" in
+	"+")	addition "$operand1" "$operand2"
+			result=$?;
+			echo "$result";;
+	"-") 	subtraction "$operand1" "$operand2"
+			result=$?;
+			echo "$result";;
+	"*")  	multiplication "$operand1" "$operand2"
+			result=$?;
+			echo "$result";;
+	"/")    division "$operand1" "$operand2"
+			result=$?;
+			echo "$result";;
+	*)	echo "Not a valid operation"
+esac
+
+# Binayak Kumar Dey
+# 18301054
+	

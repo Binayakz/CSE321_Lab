@@ -1,0 +1,17 @@
+#! /bin/bash
+
+echo "Enter a number"
+read input_number
+
+if (( $(( $input_number % 3 )) == 0 && $(( $input_number % 2 )) == 0 ))
+then 
+	echo "Hello"
+elif (( $(( $input_number % 3 )) == 0 || $(( $input_number % 2 )) == 0 ))
+then
+	echo "Nihao"
+else
+	echo "Hola"
+fi
+
+# Binayak Kumar Dey
+# 18301054

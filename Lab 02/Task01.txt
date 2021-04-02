@@ -1,0 +1,36 @@
+#! /bin/bash
+
+echo "Enter a valid ID"
+read id
+
+if [ ${#id} = 8 ]
+then
+	if [ ${id:0:2} -lt 21 ]
+	then 
+		if [ ${id:2:1} -lt 4 ]
+		then
+			semester=''
+			case "${id:2:1}" in
+				1) semester="Spring";;
+				2) semester="Fall";;
+				*) semester="Summer";;
+			esac
+			if [ ${id:3:2} -eq "01" ]
+			then
+				echo "The student is from the Dept. of CSE enrolled in $semester 20"${id:0:2}"."
+			else
+				echo "The student is not from the Dept. of CSE."
+			fi
+		else
+			echo "Invalid BRACU ID"
+		fi
+	else
+		echo "Invalid BRACU ID"
+	fi
+
+else
+	echo "Invalid BRACU ID"
+fi
+
+# Binayak Kumar Dey
+# 18301054

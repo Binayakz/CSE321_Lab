@@ -1,0 +1,29 @@
+#!/bin/bash
+echo -n "Enter the number you want to check for happy prime number: "
+read input_number
+
+result=$input_number
+
+while (( $result != 1 && $result != 4 ))
+do
+	sum=0
+
+	while (( $result > 0))
+	do
+		remainder=$(( $result % 10 ))
+		sum=$(( $(( $remainder ** 2 )) + $sum ))
+		result=$(( $result / 10 ))
+	done
+
+	result=$sum	
+done
+
+if (( $result == 1 ))
+then
+	echo "$input_number is a happy prime number."
+else
+	echo "$input_number is not a happy prime number."
+fi
+
+# Binayak Kumar Dey
+# 18301054

@@ -1,0 +1,10 @@
+touch /home/binayak/Desktop/excalibur.txt
+chmod u=rwx,g=rx,o=x /home/binayak/Desktop/excalibur.txt
+mkdir mydirectory
+cp /home/binayak/Desktop/excalibur.txt /home/binayak/mydirectory
+rm /home/binayak/Desktop/excalibur.txt
+rm /home/binayak/DeleteAll/*
+find /home/binayak/TEXT/*.txt
+grep "This" /home/binayak/TEXT/*
+sed -n 12,18p /home/binayak/TEXT/b.txt
+ls /home/binayak
